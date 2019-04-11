@@ -1,7 +1,8 @@
 :root {
   --first-color: #c99a26;
   --second-color: #9b8859;
-  --third-color: #ffffff;
+  --third--color: #c18b05;
+  --fourth-color: #ffffff;
 }
 
 .chat {
@@ -30,8 +31,6 @@
 .header-items {
   display: flex;
   flex-direction: row;
-  /*align-items: flex-end;*/
-  /*justify-content: space-between;*/
 }
 
 .header-items .navigation {
@@ -50,7 +49,7 @@
 /*---------------------*/
 .conversation {
   background-color: var(--second-color);
-  min-height: 700px;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -79,7 +78,7 @@
 }
 
 .conversation .assistant-conversation .assistant-answers .assistant-answer {
-  background-color: var(--third-color);
+  background-color: var(--fourth-color);
   padding: 17px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -105,13 +104,15 @@
 
 /*__________ User Conversation __________________*/
 
+.conversation .user-conversation {
+}
+
 .conversation .user-conversation .user-answers {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-right: 25px;
   margin-bottom: 10px;
-
 }
 
 
@@ -150,3 +151,81 @@
   font-weight: 600;
 }
 
+.conversation .user-conversation .user-answers .user-answer-setup-meeting-answer {
+  display: flex;
+  flex-direction: row;
+  font-family: Roboto, sans-serif;
+  color: var(--fourth-color);
+}
+
+.conversation .user-conversation .user-answers .user-answer-setup-meeting-answer .meeting-day-month {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--third--color);
+  border-radius: 8px 0 0 8px;
+  width: 65px;
+  height: 65px;
+  align-items: center;
+}
+
+.conversation .user-conversation .user-answers .user-answer-setup-meeting-answer .meeting-day-month .meeting-month {
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 7px;
+
+}
+
+.conversation .user-conversation .user-answers .user-answer-setup-meeting-answer .meeting-day-month .meeting-day {
+  display: flex;
+  font-size: 35px;
+  font-weight: 700;
+  margin: auto;
+
+}
+
+.conversation .user-conversation .user-answers .user-answer-setup-meeting-answer .meeting-day-month-hour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--first-color);
+  border-radius: 0 8px 8px 0;
+  color: var(--fourth-color);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.conversation .user-conversation .user-answers .user-answer-setup-meeting-answer .meeting-day-month-hour .meeting-day-name-month-day {
+  font-weight: 700;
+}
+
+.conversation .user-input-section {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  /*align-items: end;*/
+  /*justify-content: end;*/
+  justify-content: flex-end;
+  margin-right: 25px;
+  margin-bottom: 12px;
+}
+
+.conversation .user-input-section input {
+  border: 1px solid var(--third--color);
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-right: 2px;
+}
+
+.conversation .user-input-section button {
+  width: 53px;
+  height: 53px;
+  border-radius: 8px;
+  background-color: var(--third--color);
+  border: 1px solid var(--third--color);
+}
